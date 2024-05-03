@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+
+  .App-header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+  }
+
+  .Translator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+
+    .translateArea {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin-top: 20px;
+    }
+
+    textarea {
+      width: 80%;
+      min-height: 100px;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    select {
+      max-width: 150px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      max-width: 150px;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+
+    .TranslatedText {
+      width: 80%;
+      min-height: 50px;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+
+      textarea {
+        width: 100%;
+        min-height: 100px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        resize: vertical;
+      }
+    }
+  }
+}
