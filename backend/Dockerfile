@@ -30,4 +30,4 @@ RUN cp /home/translator/models/iten/*spm src/translator/models/iten/
 RUN rm -fr /home/translator/models/*
 
 EXPOSE 5000
-CMD $HOME/.local/bin/pdm start --host 172.17.0.2
+CMD $HOME/.local/bin/pdm start --host 0.0.0.0

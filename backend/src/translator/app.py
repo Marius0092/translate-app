@@ -5,10 +5,12 @@ import ctranslate2
 import sentencepiece as spm
 from flask import Flask, request, jsonify
 from flask import logging as flask_logging
+from flask_cors import CORS
 from nltk import sent_tokenize
 
 
 app = Flask(__name__)
+CORS(app)
 
 
 logger = flask_logging.create_logger(app)

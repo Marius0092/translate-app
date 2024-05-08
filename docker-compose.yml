@@ -1,0 +1,16 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"  # Expose port 3000 of the frontend container to port 3000 on the host
+    depends_on:
+      - backend  # Ensure that the backend container is started before the frontend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"  # Expose port 5000 of the backend container to port 5000 on the host

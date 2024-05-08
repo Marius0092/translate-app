@@ -10,7 +10,7 @@ function App() {
 
   const translateText = async () => {
     try {
-      const response = await fetch('URL_ENDPOINT', {
+      const response = await fetch('http://localhost:5000/translate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
