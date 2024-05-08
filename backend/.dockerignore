@@ -1,0 +1,9 @@
+.pdm-python
+.gitignore
+
+tests/
+.venv/
+
+src/translator/models
+
+../frontend
