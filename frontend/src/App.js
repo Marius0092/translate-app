@@ -3,14 +3,14 @@ import './App.scss';
 
 function App() {
   const [inputText, setInputText] = useState('');
-  const [sourceLanguage, setSourceLanguage] = useState('en-US');
-  const [targetLanguage, setTargetLanguage] = useState('it-IT');
+  const [sourceLanguage, setSourceLanguage] = useState('it-IT');
+  const [targetLanguage, setTargetLanguage] = useState('en-US');
   const [translatedText, setTranslatedText] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const translateText = async () => {
     try {
-      const response = await fetch('http://localhost:5000/translate', {
+      const response = await fetch('http://localhost:34257/translate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,11 +44,18 @@ function App() {
       <div className='Translator'>
         <div className='translateArea'>
           <select
+            value={sourceLanguage}
+            onChange={e => setSourceLanguage(e.target.value)}
+          >
+            <option value='en-US'>English</option>
+            <option value='it-IT'>Italiano</option>
+          </select>
+          <select
             value={targetLanguage}
             onChange={e => setTargetLanguage(e.target.value)}
           >
-            <option value='EN'>English</option>
-            <option value='IT'>Italiano</option>
+            <option value='en-US'>English</option>
+            <option value='it-IT'>Italiano</option>
           </select>
           <textarea
             value={inputText}
