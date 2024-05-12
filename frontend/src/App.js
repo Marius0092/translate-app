@@ -50,13 +50,6 @@ function App() {
             <option value='en-US'>English</option>
             <option value='it-IT'>Italiano</option>
           </select>
-          <select
-            value={targetLanguage}
-            onChange={e => setTargetLanguage(e.target.value)}
-          >
-            <option value='en-US'>English</option>
-            <option value='it-IT'>Italiano</option>
-          </select>
           <textarea
             value={inputText}
             onChange={e => setInputText(e.target.value)}
@@ -64,8 +57,14 @@ function App() {
           />
           <button onClick={translateText}>Translate</button>
         </div>
-        <div className='TranslatedText'>
-          <h2>Translated Text</h2>
+        <div className='targetArea'>
+          <select
+            value={targetLanguage}
+            onChange={e => setTargetLanguage(e.target.value)}
+          >
+            <option value='en-US'>English</option>
+            <option value='it-IT'>Italiano</option>
+          </select>
           <textarea
             value={translatedText}
             readOnly

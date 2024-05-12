@@ -10,10 +10,17 @@
   .Translator {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-top: 20px;
+    // align-items: center;
+    padding: 20px;
 
     .translateArea {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin-top: 20px;
+    }
+
+    .targetArea {
       display: flex;
       flex-direction: column;
       width: 80%;
